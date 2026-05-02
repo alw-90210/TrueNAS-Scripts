@@ -1,5 +1,9 @@
 # TrueNAS-Scripts
-Scripts that I use for cron jobs on TrueNAS. I started using some of these scripts in 2016 and have been adding to the scripts over the years. Please take and modify as needed. 
+Scripts that I use for cron jobs on TrueNAS. I started using some of these scripts in 2016 and have been adding to the scripts over the years. Most of them are from the Freenas Forums thread by Bidule0hm: [Scripts to report SMART, ZPool and UPS status, HDD/CPU T°, HDD identification and backup the config](https://www.truenas.com/community/threads/scripts-to-report-smart-zpool-and-ups-status-hdd-cpu-t%C2%B0-hdd-identification-and-backup-the-config.27365/). Please take and modify/use as needed. 
+
+### Compatibility
+I am currently using these under:
+* TrueNAS 25.10.3
 
 ## config_backup_unix_v2.sh
 Saves a copy of the TrueNAS config file at a specified location.
