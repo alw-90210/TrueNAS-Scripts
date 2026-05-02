@@ -2,7 +2,7 @@
 set -e
 # This script deletes files from a directory and subdirectory older than a specified number of days.
 # The deletion code in the script is:
-# find ${backups_path} -mtime +$days -type f ! -wholename ${logfile} -delete ;
+# find ${backups_path} -mtime +${days} -type f ! -wholename ${logfile} -delete ;
 
 ### Parameters ###
 helpFunction()
@@ -50,12 +50,12 @@ fi
 
 ### Deleting Files and Folders ###
 (
-    file_count="$(find ${backups_path} -mtime +$days -type f ! -wholename ${logfile} | wc -l)"
+    file_count="$(find ${backups_path} -mtime +${days} -type f ! -wholename ${logfile} | wc -l)"
     printf "Number of files that were deleted: %s \n" "$file_count"
 ) >> ${report_temp}
 
 # Delete files
-find ${backups_path} -mtime +$days -type f ! -wholename ${logfile} -delete ;
+find ${backups_path} -mtime +${days} -type f ! -wholename ${logfile} -delete ;
 
 ### Write files ###
 cat ${report_temp} >> ${logfile}
